@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Kata</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css' )}}">
+</head>
+<body>
+    <div class="banner">
+        <div class="content">
+            <h1>ENJOY!!</h1>
+        </div>
+        <div class="result">
+            <h3>
+                {% for tiga in tiga_kata %}
+                    {{ tiga }}
+                {% endfor %}
+                <br><br>
+                {% for empat in empat_kata %}
+                    {{ empat }}
+                {% endfor %}
+                <br><br>
+                {% for lima in lima_kata %}
+                    {{ lima }}
+                {% endfor %}
+                <br><br>
+                {% for enam in enam_kata %}
+                    {{ enam }}
+                {% endfor %}
+                <br><br>
+                {% for tujuh in tujuh_kata %}
+                    {{ tujuh }}
+                {% endfor %}
+            </h3>
+        </div>
+        <div class="container">
+            <div class="center-bot">
+                    <form>
+                     <input type="button" value="Coba lagi" onclick="history.back()">
+                    </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
