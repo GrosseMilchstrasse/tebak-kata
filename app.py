@@ -3,13 +3,13 @@ from flask import Flask, render_template, url_for, request
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('home.html')
 
 @app.route('/', methods=['post'])
 def my_form_post():
     text = request.form['text']
-    angka = request.form['angka']
+    angka = len(text)
     processed_text = text.lower()
     processed_number = int(angka)
 
@@ -28,12 +28,10 @@ def my_form_post():
     import itertools
     from itertools import permutations, chain
 
-    #inp = input("Masukan huruf-huruf yang ingin disusun: ")
     inp_kata = processed_text
     lst = []
     kata = [x.lower() for x in inp_kata]
 
-    #r = int(input("Jumlah huruf tiap kata: "))
     inp_jumlah_huruf = processed_number
 
     for y in list(chain.from_iterable(permutations(kata,i) for i in range (2,processed_number+1))):
@@ -53,7 +51,12 @@ def my_form_post():
     string_hasil = " ".join(str(u) for u in list_hasil)
 
     return render_template('index2.html', list_hasil=list_hasil, 
-        tiga_kata=tiga_kata, empat_kata=empat_kata, lima_kata=lima_kata, enam_kata=enam_kata, tujuh_kata=tujuh_kata)
+        tiga_kata=tiga_kata, empat_kata=empat_kata, lima_kata=lima_kata, 
+        enam_kata=enam_kata, tujuh_kata=tujuh_kata)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
