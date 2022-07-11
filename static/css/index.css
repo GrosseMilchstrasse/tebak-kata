@@ -47,31 +47,47 @@ button:hover{
   color: #fff;
   font-size: 70px;
 }
+
 .content{
-    width: 100%;
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-}
-
-input{
-  background-color: #fff;
-}
-
-.result{
   width: 100%;
   position: absolute;
-  top: 60%;
+  top: 45%;
   transform: translateY(-50%);
   text-align: center;
   color: #fff;
 }
 
-.result h3{
+input{
+  background-color: #fff;
+  font-size: 15px;
+}
+
+.text-input {
+  width: 35%;
+  padding: 3px;
+}
+
+.button-input {
+  padding: 3px;
+}
+
+.result{
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
   font-size: 20px;
-  margin-top: 20px;
+  left: 23%;
+}
+
+.table1 {
+  border-collapse: collapse;
+}
+
+tr, td {
+  text-align: left;
+  padding: 5px;
 }
 
 .again{
@@ -89,5 +105,4 @@ input{
   appearance: button;
 
   text-decoration: none;
-  color: initial;
 }

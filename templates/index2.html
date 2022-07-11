@@ -13,31 +13,36 @@
         <a class="about" href="{{ url_for('about') }}"><button>About Me</button></a>
     </header>
     <div class="title">
-        <h1>Jawaban ditemukan</h1>
+        <h1>Hasil Pencarian</h1>
     </div>
     <div class="result">
-        <h3>
-            {{ galat }}
-            {% for tiga in tiga_kata %}
-                {{ tiga }}
-            {% endfor %}
-            <br><br>
-            {% for empat in empat_kata %}
-                {{ empat }}
-            {% endfor %}
-            <br><br>
-            {% for lima in lima_kata %}
-                {{ lima }}
-            {% endfor %}
-            <br><br>
-            {% for enam in enam_kata %}
-                {{ enam }}
-            {% endfor %}
-            <br><br>
-            {% for tujuh in tujuh_kata %}
-                {{ tujuh }}
-            {% endfor %}
-        </h3>
+        <table class="table1">
+            <tr>
+                <td>Tiga Huruf</td>
+                <td>:</td>
+                <td>{% for tiga in tiga_kata %} {{ tiga }} {% endfor %}</td>
+            </tr>
+            <tr>
+                <td>Empat Huruf</td>
+                <td>:</td>
+                <td>{% for empat in empat_kata %} {{ empat }} {% endfor %}</td>
+            </tr>
+            <tr>
+                <td>Lima Huruf</td>
+                <td>:</td>
+                <td>{% for lima in lima_kata %} {{ lima }} {% endfor %}</td>
+            </tr>
+            <tr>
+                <td>Enam Huruf</td>
+                <td>:</td>
+                <td>{% for enam in enam_kata %} {{ enam }} {% endfor %}</td>
+            </tr>
+            <tr>
+                <td>Tujuh Huruf</td>
+                <td>:</td>
+                <td>{% for tujuh in tujuh_kata %} {{ tujuh }} {% endfor %}</td>
+            </tr>
+        </table>
     </div>
     <div class="again">
         <a href="{{ url_for('home') }}" class="button"><button>Coba Lagi</button></a>
