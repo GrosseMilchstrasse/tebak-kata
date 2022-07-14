@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/', methods=['post'])
 def my_form_post():
@@ -50,17 +50,27 @@ def my_form_post():
     #print([t for t in listkata if t in lst])
     string_hasil = " ".join(str(u) for u in list_hasil)
 
-    return render_template('index2.html', list_hasil=list_hasil, 
+    return render_template('index_hasil.html', list_hasil=list_hasil, 
         tiga_kata=tiga_kata, empat_kata=empat_kata, lima_kata=lima_kata, 
         enam_kata=enam_kata, tujuh_kata=tujuh_kata)
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about_me.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
 
+#Powershell flask
 #env\Scripts\activate.ps1
 #$env:FLASK_APP = ".\app.py"
 #$env:FLASK_ENV = "development"
+
+#Git Heroku
+#source env/Scripts/activate
+#git init
+#git add .
+#git commit -am 'initial'
+#heroku login
+#heroku git:remote -a generatortebakkata
+#git push heroku master

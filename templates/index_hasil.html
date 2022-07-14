@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/index2.css' )}}" rel="stylesheet" type="text/css"> 
+    <title>Shoppe: Tebak Kata Hasil</title>
+</head>
+<body>
+    <header>
+        <a class="home" href="{{ url_for('home') }}"><button>Shopee: Tebak Kata</button></a>
+        <a class="about" href="{{ url_for('about') }}"><button>About Me</button></a>
+    </header>
+    <div class="content">
+        <div class="content_hasil">
+        <h2 class="title_hasil">Hasil Pencarian</h2>
+            <div class="result">
+                <table class="table1">
+                    <tr>
+                        <td>Tiga Huruf</td>
+                        <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+                        <td>{% for tiga in tiga_kata %} {{ tiga }} {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <td>Empat Huruf</td>
+                        <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+                        <td>{% for empat in empat_kata %} {{ empat }} {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <td>Lima Huruf</td>
+                        <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+                        <td>{% for lima in lima_kata %} {{ lima }} {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <td>Enam Huruf</td>
+                        <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+                        <td>{% for enam in enam_kata %} {{ enam }} {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <td>Tujuh Huruf</td>
+                        <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+                        <td>{% for tujuh in tujuh_kata %} {{ tujuh }} {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="again">
+        <a href="{{ url_for('home') }}"><button>Coba Lagi</button></a>
+    </div>
+</body>
+</html>
