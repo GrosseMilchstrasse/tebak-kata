@@ -16,9 +16,10 @@ def my_form_post():
     import pandas as pd
 
     #Load Data Kata
-    df = pd.read_csv('data_kata.csv')
-    df = df.drop(labels="kelas", axis=1)
-    df = df.drop(labels="type", axis=1)
+    df = pd.read_csv('data_kata_new.csv')
+    #df = df.drop(labels="kelas", axis=1)
+    #df = df.drop(labels="nilai", axis=1)
+    #df = df.drop(labels="type", axis=1)
     df = df.astype(str)
 
     list_kata_df = df['lema'].tolist()

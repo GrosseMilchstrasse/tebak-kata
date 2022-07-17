@@ -167,6 +167,7 @@ p{
   border: none;
   border-radius: var(--size-radius);
   font-weight: 900;
+  cursor: pointer;
 }
 
 .button-group {
@@ -179,6 +180,7 @@ button {
   border: none;
   border-radius: var(--size-radius);
   font-weight: 900;
+  cursor: pointer;
 }
 
 .again{
